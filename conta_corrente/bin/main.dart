@@ -1,25 +1,23 @@
+import '../lib/cliente.dart';
+import '../lib/conta_corrente.dart';
+
 void main() {
 
-  var conta = new ContaCorrente();
-
-  conta.titular = "Daniel";
-  conta.agencia = 123;
-  conta.conta = 1234;
-  conta.saldo = 150.0;
-
-  print("O nome do titular é: ${conta.titular}");
-  print("O número da Agencia é: ${conta.agencia}");
-  print("O número da conta é: ${conta.conta}");
-  print("O saldo é: ${conta.saldo}");
-
-  print(conta);
-}
-
-class ContaCorrente {
-  String titular;
-  int agencia;
-  int conta;
-  double saldo;
-
+  var daniel = new Cliente()
+  ..nome = "Daniel"
+  ..cpf = "123456"
+  ..profissao = "Quarentenado";
   
+  var conta_Daniel = new ContaCorrente()
+  ..titular = daniel
+  ..agencia = 123
+  ..conta = 1
+  ..saldo = 920;
+
+  print(conta_Daniel.agencia);
+  print(conta_Daniel.titular.nome);
+
+  conta_Daniel.ver_extrato();
+
 }
+
