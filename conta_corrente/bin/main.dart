@@ -11,13 +11,13 @@ void main() {
   var conta_Daniel = new ContaCorrente()
   ..titular = daniel
   ..agencia = 123
-  ..conta = 1
-  ..saldo = 920;
+  ..conta = 1;
 
-  print(conta_Daniel.agencia);
-  print(conta_Daniel.titular.nome);
+  print(conta_Daniel.saldo);
+  conta_Daniel.novo_saldo = 100;
+  print(conta_Daniel.saldo);
 
-  conta_Daniel.ver_extrato();
+  
 
 }
 
